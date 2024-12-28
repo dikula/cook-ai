@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 client = OpenAI()
-client.api_key = "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"
+client.api_key = os.getenv('OPENAI_API_KEY')
 def ask_chatgpt(prompt: str) -> str:
 
     print('KEYOPEN',client.api_key)
